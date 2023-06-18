@@ -1,4 +1,4 @@
-# Create a Real-time error alert system using the Vonage Messages APIkey
+# Create a Real-time error alert system using the Vonage Messages API
 
 ## To setup this project
 
