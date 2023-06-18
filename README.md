@@ -17,7 +17,7 @@ Project tree:
 git clone git@github.com:Psycadelik/Real-time-error-monitor.git && cd Real-time-error-monitor
 ```
 
-2. create .env file from the sample provided and replace the fields with your credentials from the Vonage developer dashboard:
+2. create `.env` file from the sample provided using the command `cp .env.sample .env` and replace the fields with your credentials from the Vonage developer dashboard:
 ```
 # Vonage Credentials
 VONAGE_API_KEY=XXXXXX
@@ -33,7 +33,7 @@ RECIPIENT=XXXXX
 
 5. Run the command on a terminal:
 ```
-tail -F "/path/to/log/file" | grep --line-buffered -i "error" | <project_dir>/.venv/bin/activate >pyp -b 'sys.path.append(""); from alert import send_alert' 'send_alert(line)'
+tail -F "/path/to/log/file" | grep --line-buffered -i "error" | <project_dir>/.venv/bin/pyp -b 'sys.path.append(""); from alert import send_alert' 'send_alert(line)'
 ```
 
 **Note**:
@@ -42,5 +42,5 @@ For example, we have an error log file in our `/tmp` folder: `application.log`.
 
 Run the command as follows:
 ```
-tail -F "/tmp/application.log" | grep --line-buffered -i "error" | <project_folder>/.venv/bin/activate >pyp -b 'sys.path.append(""); from alert import send_alert' 'send_alert(line)'
+tail -F "/tmp/application.log" | grep --line-buffered -i "error" | <project_folder>/.venv/bin/pyp -b 'sys.path.append(""); from alert import send_alert' 'send_alert(line)'[
 ```
